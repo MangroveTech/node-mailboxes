@@ -1,0 +1,30 @@
+{
+  "name": "mailboxes",
+  "version": "0.0.1",
+  "description": "List primary better mailboxes, especially for GMail",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yorkie/inbox-flat.git"
+  },
+  "keywords": [
+    "inbox",
+    "imap"
+  ],
+  "dependencies": {
+    "async": "*"
+  },
+  "devDependencies": {
+		"inbox": "*",
+		"tape": "*"
+  },
+  "author": "Yorkie Neil <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yorkie/node-mailboxes/issues"
+  },
+  "homepage": "https://github.com/yorkie/node-mailboxes"
+}
