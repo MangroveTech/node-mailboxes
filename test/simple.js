@@ -15,8 +15,8 @@ test('usage', function(t) {
 
   getMailboxes(client, function() {
     console.log(arguments);
+    t.end();
   });
 
   client.connect();
-
 });
