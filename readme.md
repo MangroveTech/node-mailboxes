@@ -1,4 +1,3 @@
-
 node-mailboxes
 ======================
 
@@ -19,11 +18,11 @@ var inbox = require('inbox');
 var client = inbox.createConnection(false, 'imap.gmail.com', {
   secureConnection: true,
   auth: yourauthOption
-})
+});
 
 mailboxes(client, function(err, mailboxes) {
   // Then you would get a well-format folders.
-})
+});
 client.connect();
 ```
 
