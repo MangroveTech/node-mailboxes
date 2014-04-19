@@ -4,22 +4,14 @@ var async = require('async');
 function mailboxes(client, callback) {
 
   var folders = {};
-  client.on('connect', onConnect);
-  client.on('error', handleError);
-
-  function onConnect(err) {
+  client.listMailboxes(function(err, items) {
     if (err) {
       return handleError(err);
     }
-    client.listMailboxes(function(err, items) {
-      if (err) {
-        return handleError(err);
-      }
-      async.each(items, handleItem, function() {
-        callback(null, folders);
-      });
+    async.each(items, handleItem, function() {
+      callback(null, folders);
     });
-  }
+  });
 
   function handleItem(item, done) {
     if (item.hasChildren) {
